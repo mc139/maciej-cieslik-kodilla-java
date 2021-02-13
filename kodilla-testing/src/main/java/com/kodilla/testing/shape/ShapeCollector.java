@@ -30,8 +30,8 @@ public class ShapeCollector {
 
     }
 
-    static Object getFigure(int n) {
-        Object output = shapes.get(n);
+    static Shape getFigure(int n) {
+        Shape output = shapes.get(n);
         return output;
     }
 
