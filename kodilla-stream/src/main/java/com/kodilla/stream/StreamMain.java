@@ -4,6 +4,8 @@ import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -59,7 +61,7 @@ public class StreamMain {
 //        ArrayList<Forum> myForumList =
 
         LocalDate twentyYearsAgo = LocalDate.ofYearDay(2001, 40);
-        Map<Integer,ForumUser> myFilteredForum = Forum.getUserList().stream()
+        Map<Integer, ForumUser> myFilteredForum = Forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getDateOfBirth().isBefore(twentyYearsAgo))
                 .filter(forumUser -> forumUser.getSex() == 'M')
                 .filter(forumUser -> forumUser.getNumberOfPosts() >= 1)
@@ -67,9 +69,6 @@ public class StreamMain {
 
         myFilteredForum.entrySet().stream()
                 .forEach(System.out::println);
-
-
-
 
     }
 }
