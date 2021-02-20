@@ -7,14 +7,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class World {
-//
-//    public final List<Continent> continents = new ArrayList<>();
-//
-//    public BigDecimal getPeopleQuantity(Continent continent){
-//        BigDecimal totalPeople =  continents.stream()
-//                .flatMap(Continent-> continent.getCountriesOnCertainContinent().stream())
-//                .map(Country::getPeopleQuantity)
-//                .reduce(BigDecimal.ZERO,(sum,next) -> sum + next);
-//        return totalPeople;
-//    }
+
+    public final List<Continent> continentsInTheWorld = new ArrayList<>();
+
+    public void addContinent(Continent continent) {
+        continentsInTheWorld.add(continent);
+    }
+
+    public BigDecimal getPeopleQuantity() {
+        BigDecimal totalPeople = continentsInTheWorld.stream()
+                .flatMap(continent -> continent.getCountriesOnCertainContinent().stream())
+                .map(Country::getPeopleQuantity)
+                .reduce(BigDecimal.ZERO, (sum, next) -> sum.add(next));
+        return totalPeople;
+    }
 }
