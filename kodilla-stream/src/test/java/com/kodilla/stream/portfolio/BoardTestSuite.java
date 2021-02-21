@@ -109,7 +109,6 @@ public class BoardTestSuite {
 
     @Test
     void testAddTaskListFindOutdatedTasks() {
-
         //Given
         Board project = prepareTestData();
 
@@ -130,7 +129,6 @@ public class BoardTestSuite {
 
     @Test
     void testAddTaskListFindLongTasks() {
-
         //Given
         Board project = prepareTestData();
 
@@ -156,7 +154,6 @@ public class BoardTestSuite {
         //GIVEN
         Board project = prepareTestData();
 
-
         //WHEN
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
@@ -169,7 +166,6 @@ public class BoardTestSuite {
                 .average();
 
         double tasksDoneAsDouble = tasksDone.getAsDouble();
-
 
         //THEN
         assertEquals(10,tasksDoneAsDouble);
