@@ -161,8 +161,7 @@ public class BoardTestSuite {
         OptionalDouble tasksDone = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(fm -> fm.getTasks().stream())
-                .map(done -> ChronoUnit.DAYS.between(done.getCreated(), LocalDate.now()))
-                .flatMapToLong(fml -> LongStream.of(fml))
+                .mapToLong(done -> ChronoUnit.DAYS.between(done.getCreated(), LocalDate.now()))
                 .average();
 
         double tasksDoneAsDouble = tasksDone.getAsDouble();
