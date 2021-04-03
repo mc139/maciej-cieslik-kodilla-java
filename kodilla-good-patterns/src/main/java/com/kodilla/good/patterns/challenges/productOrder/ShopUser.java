@@ -6,9 +6,12 @@ public class ShopUser {
     private String userName;
     private double walletValue;
 
-
     public String getName() {
         return name;
+    }
+
+    public double getWalletValue() {
+        return walletValue;
     }
 
     public String getUserName() {
