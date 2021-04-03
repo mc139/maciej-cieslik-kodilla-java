@@ -4,11 +4,10 @@ public class Application {
 
     public static void main(String[] args) {
 
-
         PurchaseRequestRetriever purchaseRequestRetriever = new PurchaseRequestRetriever();
         PurchaseRequest purchaseRequest = new PurchaseRequestRetriever().retrieve();
 
-        BuyingProcessor buyingProcessor = new BuyingProcessor();
+        ProductOrderService productOrderService = new ProductOrderService()
 
     }
 }
