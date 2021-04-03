@@ -5,5 +5,4 @@ public class ShoppingValidator {
     public ShoppingValidator(ShopUser user,ShoppingCart cart){
 
     }
-    }
 }

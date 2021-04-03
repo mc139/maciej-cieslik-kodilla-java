@@ -8,8 +8,6 @@ public class ShoppingCart implements ShoppingCartProcessor {
     int quantity;
     double totalPrice = product.getPrice() * quantity;
 
-
-
     @Override
     public boolean CartProcessor(ShopUser shopUser, Product product, int quantity, LocalDate date) {
        return  shopUser.getWalletValue() > totalPrice ? true : false;

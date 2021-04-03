@@ -1,7 +1,6 @@
 package com.kodilla.good.patterns.challenges.productOrder;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public interface ShoppingCartProcessor {
 
