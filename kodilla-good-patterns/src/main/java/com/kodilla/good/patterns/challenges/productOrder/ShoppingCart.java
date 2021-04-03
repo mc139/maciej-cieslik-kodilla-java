@@ -12,4 +12,8 @@ public class ShoppingCart implements ShoppingCartProcessor {
     public boolean CartProcessor(ShopUser shopUser, Product product, int quantity, LocalDate date) {
        return  shopUser.getWalletValue() > totalPrice ? true : false;
     }
+
+    public void inform(ShopUser user) {
+
+    }
 }

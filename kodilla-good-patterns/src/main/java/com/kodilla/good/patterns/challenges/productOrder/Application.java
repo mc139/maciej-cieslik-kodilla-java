@@ -4,7 +4,11 @@ public class Application {
 
     public static void main(String[] args) {
 
-        ShopUser user1 = new ShopUser("John Smith","John123",2000);
+
+        PurchaseRequestRetriever purchaseRequestRetriever = new PurchaseRequestRetriever();
+        PurchaseRequest purchaseRequest = new PurchaseRequestRetriever().retrieve();
+
+        BuyingProcessor buyingProcessor = new BuyingProcessor();
 
     }
 }
