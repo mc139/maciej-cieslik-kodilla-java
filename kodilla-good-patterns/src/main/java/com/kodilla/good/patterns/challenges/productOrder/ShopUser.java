@@ -23,4 +23,10 @@ public class ShopUser {
         this.userName = userName;
         this.walletValue = walletValue;
     }
+
+    @Override
+    public String toString() {
+        return "User : " + name + ' ' +
+                "username : " + userName + ' ' + "  ";
+    }
 }

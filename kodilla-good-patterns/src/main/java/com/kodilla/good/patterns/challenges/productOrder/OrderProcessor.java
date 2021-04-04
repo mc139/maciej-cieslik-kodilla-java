@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.challenges.productOrder;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class OrderProcessor implements ShoppingCartProcessor {
+public class OrderProcessor {
 
     ShopUser user;
     Product product;
@@ -24,11 +24,5 @@ public class OrderProcessor implements ShoppingCartProcessor {
         this.quantity = quantity;
         this.date = date;
         this.isAbleToProcess = isAbleToProcess;
-    }
-
-
-    @Override
-    public boolean CartProcessor(ShopUser shopUser, Product product, int quantity, LocalDate date) {
-        return true;
     }
 }

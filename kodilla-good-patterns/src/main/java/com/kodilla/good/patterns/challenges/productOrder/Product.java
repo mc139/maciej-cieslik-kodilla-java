@@ -2,9 +2,9 @@ package com.kodilla.good.patterns.challenges.productOrder;
 
 public class Product {
 
-    private String productName;
-    private String productInformation;
-    private double price;
+    private final String productName;
+    private final String productInformation;
+    private final double price;
 
     public Product(String productName, String productInformation, double price) {
         this.productName = productName;
@@ -26,10 +26,8 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product: " +
-                "productName: " + productName + '\'' +
-                ", productInformation:" + productInformation + '\'' +
-                ", price " + price +
-                '}' + "GBP";
+        return "Product: " + productName + '\'' +
+                ", productInformation: " + productInformation + '\'' +
+                ", price: " + price + "GBP";
     }
 }
