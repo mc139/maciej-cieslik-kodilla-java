@@ -1,9 +1,14 @@
-package com.kodilla.good.patterns.challenges.foodchallenge;
+package com.kodilla.good.patterns.challenges.foodchallenge.productDataBase;
+
+import com.kodilla.good.patterns.challenges.foodchallenge.supplier.FoodSupplier;
 
 public class Product {
 
     private String productName;
     private String description;
+    private double price;
+    private FoodSupplier foodSupplier;
+
 
     public Product(String productName, String description) {
         this.productName = productName;
