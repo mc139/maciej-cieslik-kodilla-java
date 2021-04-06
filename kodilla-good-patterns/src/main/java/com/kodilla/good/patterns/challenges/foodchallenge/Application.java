@@ -17,10 +17,10 @@ public class Application {
                 orderEFS.getProductList(),orderEFS.getDateTime(),orderEFS.isPaid(),"ExtraFoodShop");
 
         Order order2 = new Order(orderHS.getInvoiceNumber(), orderHS.getFoodSupplier(),
-                orderHS.getProductList(),orderHS.getDateTime(),orderHS.isPaid(),"ExtraFoodShop");
+                orderHS.getProductList(),orderHS.getDateTime(),orderHS.isPaid(),"HealthyShop");
 
         Order order3 = new Order(orderGF.getInvoiceNumber(), orderGF.getFoodSupplier(),
-                orderGF.getProductList(),orderGF.getDateTime(),orderGF.isPaid(),"ExtraFoodShop");
+                orderGF.getProductList(),orderGF.getDateTime(),orderGF.isPaid(),"GlutenFreShop");
 
         Distributor distributor = new Distributor();
         distributor.createOrder(order1);
