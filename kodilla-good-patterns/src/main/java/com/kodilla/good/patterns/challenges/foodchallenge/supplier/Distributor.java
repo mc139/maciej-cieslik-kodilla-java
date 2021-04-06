@@ -7,28 +7,22 @@ import java.math.BigDecimal;
 
 public class Distributor {
 
-    private String nameOfSupplier;
+    private Order order;
 
-    public Distributor(String nameOfSupplier) {
-        this.nameOfSupplier = nameOfSupplier;
+    public Distributor() {
+
     }
 
-    public void createOrder(){
-        if (nameOfSupplier == "ExtraFoodShop"){
-            ExtraFoodShop extraFoodShop = new ExtraFoodShop("extra food shop","email",new BigDecimal("213123123"));
-            OrderCreator orderCreator = new OrderCreator();
-            Order order = orderCreator.sampleOrderExtraFoodShop();
-            extraFoodShop.process(order);
-        } if (nameOfSupplier == "GlutenFreeShop"){
-            GlutenFreeShop glutenFreeShop = new GlutenFreeShop("GlutenFreeShop","email", new BigDecimal("213213423444"));
-            OrderCreator orderCreator = new OrderCreator();
-            Order order = orderCreator.sampleOrderGlutenFreeShop();
-            glutenFreeShop.process(order);
-        } if (nameOfSupplier == "HealthyShop"){
-            HealthyShop healthyShop = new HealthyShop("HealthyShop","email",new BigDecimal("6632131245"));
-            OrderCreator orderCreator = new OrderCreator();
-            Order order = orderCreator.sampleOrderHealthyShop();
-            healthyShop.process(order);
+    public void createOrder(Order order){
+        if (order.getFoodSupplier()instanceof ExtraFoodShop){
+            ExtraFoodShop ex = new ExtraFoodShop("ExtraFoodShop","mail",new BigDecimal("231231231"));
+            ex.process(order);
+        } if (order.getFoodSupplier()instanceof GlutenFreeShop){
+            GlutenFreeShop gf = new GlutenFreeShop("GlutenFreeShop","mail",new BigDecimal("123556678"));
+            gf.process(order);
+        } if (order.getFoodSupplier() instanceof HealthyShop){
+            HealthyShop hs = new HealthyShop("HealthyShop","email",new BigDecimal("6632131245"));
+            hs.process(order);
         }
     }
 }

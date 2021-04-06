@@ -2,6 +2,8 @@ package com.kodilla.good.patterns.challenges.foodchallenge.productDataBase;
 
 import com.kodilla.good.patterns.challenges.foodchallenge.supplier.FoodSupplier;
 
+import java.util.Objects;
+
 public class Product {
 
     private String productName;
@@ -28,8 +30,8 @@ public class Product {
 
         Product product = (Product) o;
 
-        if (productName != null ? !productName.equals(product.productName) : product.productName != null) return false;
-        return description != null ? description.equals(product.description) : product.description == null;
+        if (!Objects.equals(productName, product.productName)) return false;
+        return Objects.equals(description, product.description);
     }
 
     @Override

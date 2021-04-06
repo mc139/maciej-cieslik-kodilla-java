@@ -32,7 +32,7 @@ public class OrderCreator {
         shoppingList.add(new Product("bread", "white"));
         shoppingList.add(new Product("bread", "white"));
 
-        Order order = new Order(1002, extraFoodShop, shoppingList, LocalDateTime.now(), random.nextBoolean());
+        Order order = new Order(1002, extraFoodShop, shoppingList, LocalDateTime.now(), random.nextBoolean(),"ExtraFoodShop");
 
         return order;
     }
@@ -50,7 +50,7 @@ public class OrderCreator {
         shoppingList.add(new Product("bread", "white"));
         shoppingList.add(new Product("bread", "white"));
 
-        Order order = new Order(134202, glutenFreeShop, shoppingList, LocalDateTime.now(), random.nextBoolean());
+        Order order = new Order(134202, glutenFreeShop, shoppingList, LocalDateTime.now(), random.nextBoolean(),"glutenFreeShop");
 
         return order;
     }
@@ -68,7 +68,7 @@ public class OrderCreator {
         shoppingList.add(new Product("bread", "white"));
         shoppingList.add(new Product("bread", "white"));
 
-        Order order = new Order(104402, HealthyShop, shoppingList, LocalDateTime.now(), random.nextBoolean());
+        Order order = new Order(104402, HealthyShop, shoppingList, LocalDateTime.now(), random.nextBoolean(),"HealthyShop");
 
         return order;
     }

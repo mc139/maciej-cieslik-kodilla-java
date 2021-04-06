@@ -13,13 +13,15 @@ public class Order {
     private List<Product> productList;
     private LocalDateTime dateTime;
     private boolean isPaid;
+    private String nameOfSupplier;
 
-    public Order(int invoiceNumber, FoodSupplier foodSupplier, List<Product> productList, LocalDateTime dateTime, boolean isPaid) {
+    public Order(int invoiceNumber, FoodSupplier foodSupplier, List<Product> productList, LocalDateTime dateTime, boolean isPaid,String nameOfSupplier) {
         this.invoiceNumber = invoiceNumber;
         this.foodSupplier = foodSupplier;
         this.productList = productList;
         this.dateTime = dateTime;
         this.isPaid = isPaid;
+        this.nameOfSupplier = nameOfSupplier;
     }
 
     public int getInvoiceNumber() {
