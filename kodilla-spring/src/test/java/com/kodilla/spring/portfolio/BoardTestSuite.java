@@ -17,18 +17,18 @@ public class BoardTestSuite {
         Board board = context.getBean(Board.class);
 
         //WHEN
-        board.getDoneList().add("Done Task");
-        board.getInProgressList().add("In Progress Task");
-        board.getToDoList().add("ToDO Task");
+
+        String ip = "inProgress";
+        String dn = "done";
+        String td = "todo";
+        board.getDoneList().getTasks().add(dn);
+        board.getInProgressList().getTasks().add(ip);
+        board.getToDoList().getTasks().add(td);
 
         //THEN
-        Assertions.assertEquals("Done Task",board.getDoneList().getTasks().get(0));
-        Assertions.assertEquals("In Progress Task",board.getInProgressList().getTasks().get(0));
-        Assertions.assertEquals("ToDO Task",board.getToDoList().getTasks().get(0));
-
-
-
-
+        Assertions.assertEquals("done",board.getDoneList().getTasks().get(0));
+        Assertions.assertEquals("inProgress",board.getInProgressList().getTasks().get(0));
+        Assertions.assertEquals("todo",board.getToDoList().getTasks().get(0));
 
     }
 
