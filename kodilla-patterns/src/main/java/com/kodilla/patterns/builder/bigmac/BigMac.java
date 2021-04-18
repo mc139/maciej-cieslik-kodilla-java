@@ -42,7 +42,7 @@ public final class BigMac {
 
     }
 
-    public BigMac(Bun bun, int numberOfPatties, Sauce sauce, List<IngredientsType> ingredientsTypeList) {
+    private BigMac(Bun bun, int numberOfPatties, Sauce sauce, List<IngredientsType> ingredientsTypeList) {
         this.bun = bun;
         this.numberOfPatties = numberOfPatties;
         this.sauce = sauce;
