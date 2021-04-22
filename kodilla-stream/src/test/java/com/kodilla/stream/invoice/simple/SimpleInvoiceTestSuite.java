@@ -12,10 +12,17 @@ public class SimpleInvoiceTestSuite {
         SimpleInvoice invoice = new SimpleInvoice();
 
         //WHEN
-        invoice.addItem(new SimpleItem(new SimpleProduct("product1",17.28),2.0));
-        invoice.addItem(new SimpleItem(new SimpleProduct("product2",11.99),3.5));
-        invoice.addItem(new SimpleItem(new SimpleProduct("product3",6.49),5.0));
+
+        SimpleProduct product2 = new SimpleProduct("Product2",40);
+        SimpleItem item2 = new SimpleItem(product2,2);
+
+
+        invoice.addItem(new SimpleItem(new SimpleProduct("Product1",17.28),2.0));
+        invoice.addItem(new SimpleItem(new SimpleProduct("Product2",11.99),3.5));
+        invoice.addItem(new SimpleItem(new SimpleProduct("Product3",6.49),5.0));
+
         //THEN
+        invoice.getValueToPay();
         assertEquals(108.975, invoice.getValueToPay(),0.001);
     }
 
