@@ -58,15 +58,15 @@ class DbManagerTestSuite {
 
         //THEN
         int counter = 0;
-        while(rs.next()){
-            System.out.println(rs.getString("FIRSTNAME") + ","+
+        while (rs.next()) {
+            System.out.println(rs.getString("FIRSTNAME") + "," +
                     rs.getString("LASTNAME") + ", " +
                     rs.getInt("POST_NUMBER"));
-                    counter++;
+            counter++;
         }
         rs.close();
         statement.close();
-        assertEquals(2,counter);
+        assertEquals(2, counter);
 
     }
 }
