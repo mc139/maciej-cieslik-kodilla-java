@@ -6,52 +6,54 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name= "INVOICES")
+@Table(name = "INVOICES")
 public class Invoice {
 
     private int id;
     private String number;
     private List<Item> items = new ArrayList<>();
 
-    public Invoice() {
-    }
-
-    public Invoice(int id, String number, List<Item> items) {
-        this.id = id;
+    public Invoice(String number, List<Item> items) {
         this.number = number;
         this.items = items;
+    }
+
+    public Invoice(String number) {
+        this.number = number;
+    }
+
+    public Invoice() {
+
     }
 
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name = "ID",unique = true )
+    @Column(name = "ID", unique = true)
     public int getId() {
         return id;
+    }
+
+    @Column(name = "NUMBER")
+    public String getNumber() {
+        return number;
+    }
+
+    @OneToMany(targetEntity = Item.class,
+            mappedBy = "invoice",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
+    @Column(name = "ITEM_ID", nullable = false)
+    public List<Item> getItems() {
+        return items;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    @NotNull
-    @Column (name ="NUMBER")
-    public String getNumber() {
-        return number;
-    }
-
     public void setNumber(String number) {
         this.number = number;
-    }
-
-    @NotNull
-    @OneToMany(targetEntity = Item.class,
-            mappedBy = "invoice",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
-    @Column (name = "ITEMS")
-    public List<Item> getItems() {
-        return items;
     }
 
     public void setItems(List<Item> items) {

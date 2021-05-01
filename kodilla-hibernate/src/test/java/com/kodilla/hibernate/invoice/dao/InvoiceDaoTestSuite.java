@@ -9,48 +9,46 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest
 public class InvoiceDaoTestSuite {
+
     @Autowired
-    InvoiceDao invd;
+    private InvoiceDao invd;
 
     @Test
-    void testInvoiceDaoSave() {
+    void git testInvoiceDaoSave() {
 
         //GIVEN
-        Invoice invoice = new Invoice();
+        Invoice invoice = new Invoice("00110333");
 
         Product product1 = new Product("product One");
         Product product2 = new Product("product Two");
         Product product3 = new Product("product Three");
 
-        Item item1 = new Item(product1,new BigDecimal("20.0"),6);
-        Item item2 = new Item(product2,new BigDecimal("50.0"),16);
-        Item item3 = new Item(product3,new BigDecimal("80.0"),61);
+        Item item1 = new Item(product1, new BigDecimal("20.0"), 6);
+        Item item2 = new Item(product2, new BigDecimal("50.0"), 16);
+        Item item3 = new Item(product3, new BigDecimal("80.0"), 61);
 
-        List<Item> myItems = new ArrayList<Item>();
-        myItems.add(item1);
-        myItems.add(item2);
-        myItems.add(item3);
+        item1.setInvoice(invoice);
+        item2.setInvoice(invoice);
+        item3.setInvoice(invoice);
 
-        invoice.setItems(myItems);
+        List<Item> list = Arrays.asList(item1, item2, item3);
+        invoice.setItems(list);
 
         //WHEN
         invd.save(invoice);
         int size = invoice.getItems().size();
 
         //THEN
-        Assertions.assertEquals(3,size);
+        Assertions.assertEquals(3, size);
 
         //CLEANUP
-        try {
-            invd.deleteById(invoice.getId());
-        } catch (Exception e) {
-            //do nothing
-        }
+        invd.deleteById(invoice.getId());
+
     }
 
 }
