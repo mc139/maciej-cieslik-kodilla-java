@@ -19,7 +19,7 @@ public class InvoiceDaoTestSuite {
     private InvoiceDao invd;
 
     @Test
-    void git testInvoiceDaoSave() {
+    void testInvoiceDaoSave() {
 
         //GIVEN
         Invoice invoice = new Invoice("00110333");
