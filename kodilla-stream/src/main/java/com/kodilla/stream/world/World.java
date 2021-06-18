@@ -1,10 +1,8 @@
 package com.kodilla.stream.world;
 
 import java.math.BigDecimal;
-import java.text.Collator;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class World {
 

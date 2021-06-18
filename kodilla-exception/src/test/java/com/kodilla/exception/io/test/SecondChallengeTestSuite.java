@@ -1,9 +1,5 @@
 package com.kodilla.exception.io.test;
 
-import com.kodilla.exception.test.ExceptionHandling;
-import com.kodilla.exception.test.SecondChallenge;
-import org.junit.jupiter.api.Test;
-
 //public class SecondChallengeTestSuite {
 //
 ////    // VOID! PLEASE IGNORE CODE BELOW !

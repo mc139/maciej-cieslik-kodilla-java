@@ -1,6 +1,5 @@
 package com.kodilla.testing.weather.stub;
 
-import java.text.DecimalFormat;
 import java.util.*;
 
 public class WeatherForecast {

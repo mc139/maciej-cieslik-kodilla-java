@@ -1,8 +1,8 @@
 package com.kodilla.hibernate.invoice.dao;
 
-import com.kodilla.hibernate.invoice.Invoice;
 import com.kodilla.hibernate.invoice.Item;
 import com.kodilla.hibernate.invoice.Product;
+import com.kodilla.hibernate.invoice.Invoice;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

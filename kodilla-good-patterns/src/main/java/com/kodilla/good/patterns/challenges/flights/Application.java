@@ -1,7 +1,7 @@
 package com.kodilla.good.patterns.challenges.flights;
 
-import com.kodilla.good.patterns.challenges.flights.airports.ConnectionCreator;
 import com.kodilla.good.patterns.challenges.flights.airports.FlightFinder;
+import com.kodilla.good.patterns.challenges.flights.airports.ConnectionCreator;
 
 public class Application {
 

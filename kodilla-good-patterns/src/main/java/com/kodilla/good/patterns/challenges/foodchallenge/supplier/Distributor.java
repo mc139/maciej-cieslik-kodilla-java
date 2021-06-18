@@ -1,7 +1,6 @@
 package com.kodilla.good.patterns.challenges.foodchallenge.supplier;
 
 import com.kodilla.good.patterns.challenges.foodchallenge.orders.Order;
-import com.kodilla.good.patterns.challenges.foodchallenge.orders.OrderCreator;
 
 import java.math.BigDecimal;
 

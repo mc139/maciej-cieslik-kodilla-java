@@ -1,7 +1,7 @@
 package com.kodilla.testing.forum;
 
-import org.junit.jupiter.api.*;
 import com.kodilla.testing.user.SimpleUser;
+import org.junit.jupiter.api.*;
 
 @DisplayName("ForumUser test")
 public class ForumTestSuite {
